@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+
+  ul{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover, button:hover {
+    cursor: pointer;
+  }
+}
