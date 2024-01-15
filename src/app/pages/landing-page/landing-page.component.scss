@@ -1,0 +1,21 @@
+@import 'assets/scss/_base.scss';
+
+section {
+  font-family: $ff-poppins;
+
+  &.banner {
+    background-image: url('../../../assets/images/comunidade.png');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-color: $primary-color;
+    padding: 100% 0 10%;
+    text-align: center;
+
+    h1 {
+      color: #000;
+      font-size: 2rem;
+      font-weight: $fw-3;
+      padding-bottom: 1rem;
+    }
+  }
+}
