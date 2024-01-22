@@ -6,9 +6,9 @@ section {
   &.banner {
     background-image: url('../../../assets/images/comunidade.png');
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: 100% 357px;
     background-color: $primary-color;
-    padding: 100% 0 10%;
+    padding: 370px 0 20px;
     text-align: center;
 
     h1 {
@@ -16,6 +16,25 @@ section {
       font-size: 2rem;
       font-weight: $fw-3;
       padding-bottom: 1rem;
+      margin: auto;
+      max-width: 18ch;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    &.banner {
+      background-size: 55% 100%;
+      background-position: right;
+      text-align: initial;
+      padding: 70px 0;
+
+      h1 {
+        margin: 0 0 20px 0;
+        font-size: $fs-7;
+        max-width: 10ch;
+        text-align: initial;
+      }
     }
   }
 }
