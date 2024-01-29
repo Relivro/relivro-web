@@ -1,4 +1,4 @@
-@import 'assets/scss/_base.scss';
+@use 'assets/scss/base.scss' as *;
 
 header {
   background-color: $header-background;
@@ -20,20 +20,19 @@ header {
     border-radius: 20px;
 
     color: $secondary-color;
-    font-size: $fs-2;
+    @include regular-fts(small);
     font-weight: $fw-3;
 
     padding: 0px 16px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 75em) {
 
     & img {
       width: 120px;
     }
 
     & a {
-      font-size: $fs-3;
       padding: 2px 22px;
     }
   }
