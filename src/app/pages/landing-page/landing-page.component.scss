@@ -24,6 +24,35 @@ section {
     }
   }
 
+  & .description {
+    padding: 70px 0 40px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      padding: 0 16px;
+
+      & picture img {
+        width: 100%;
+      }
+
+      & p {
+        color: $primary-black;
+        font-weight: $fw-1;
+        @include regular-fts(medium);
+
+        max-width: 25ch;
+
+        & span {
+          font-weight: $fw-3;
+          display: inline-block;
+        }
+      }
+    }
+  }
 
   @media screen and (min-width: 75em) {
     &.banner {
@@ -36,6 +65,23 @@ section {
         margin: 0 0 20px 0;
         max-width: 14ch;
         text-align: initial;
+      }
+    }
+
+    & .description {
+      padding: 70px 0;
+
+      &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        & picture img {
+          width: 90%;
+        }
+
+        & p {
+          max-width: 30ch;
+        }
       }
     }
   }
