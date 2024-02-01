@@ -3,7 +3,7 @@
 section {
   font-family: $ff-poppins;
 
-  &.banner {
+  & .banner {
     background-image: url('../../../assets/images/comunidade.png');
     background-repeat: no-repeat;
     background-size: 100% 357px;
@@ -20,7 +20,7 @@ section {
       max-width: 18ch;
 
       font-weight: $fw-3;
-      @include title-fts(medium);
+      @include title-fts(large);
     }
   }
 
@@ -55,7 +55,7 @@ section {
   }
 
   @media screen and (min-width: 75em) {
-    &.banner {
+    & .banner {
       background-size: 55% 100%;
       background-position: right;
       padding: 70px 0;
