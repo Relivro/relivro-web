@@ -5,27 +5,30 @@ $fw-2: 500;
 $fw-3: 700;
 
 
-$fs-1: clamp(0.875rem, 0.778rem + 0.4848vw, 1.375rem);
-/* 14px - 22px*/
-$fs-2: clamp(1.0938rem, 0.9725rem + 0.6061vw, 1.7188rem);
-/* 17px - 27px*/
-$fs-3: clamp(1.3675rem, 1.216rem + 0.7576vw, 2.1488rem);
-/* 21px - 34px*/
-$fs-4: clamp(1.7088rem, 1.5193rem + 0.9473vw, 2.6856rem);
-/* 27px - 42px*/
-$fs-5: clamp(2rem, 1.481rem + 2.308vw, 4.25rem);
-/* 32px - 68px*/
-$fs-6: clamp(2.67rem, 2.374rem + 1.48vw, 4.1963rem);
-/* 42px - 67px*/
+/* 13.3333px → 20.8px */
+$fs-1: clamp(0.8333rem, 0.74rem + 0.4667vi, 1.3rem);
+/* 16px → 26px */
+$fs-2: clamp(1rem, 0.875rem + 0.625vi, 1.625rem);
+/* 19.2px → 32.5px */
+$fs-3: clamp(1.2rem, 1.0338rem + 0.8313vi, 2.0313rem);
+/* 23.04px → 40.625px */
+$fs-4: clamp(1.44rem, 1.2202rem + 1.0991vi, 2.5391rem);
+/* 33.1776px → 63.4766px */
+$fs-5: clamp(2.0736rem, 1.6949rem + 1.8937vi, 3.9673rem);
+
 
 @mixin regular-fts($size) {
   line-height: 1.6;
 
-  @if $size == small {
+  @if $size ==small {
     font-size: $fs-1;
-  } @else if $size == medium {
+  }
+
+  @else if $size ==medium {
     font-size: $fs-2;
-  } @else if $size == large{
+  }
+
+  @else if $size ==large {
     font-size: $fs-3;
   }
 }
@@ -33,11 +36,11 @@ $fs-6: clamp(2.67rem, 2.374rem + 1.48vw, 4.1963rem);
 @mixin title-fts($size) {
   line-height: 1.2;
 
-  @if $size == small {
+  @if $size ==small {
     font-size: $fs-4;
-  } @else if $size == medium {
+  }
+
+  @else if $size ==large {
     font-size: $fs-5;
-  } @else if $size == large{
-    font-size: $fs-6;
   }
 }
