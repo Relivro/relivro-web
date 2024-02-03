@@ -66,4 +66,24 @@
       </div>
     </app-container>
   </section>
+
+  <section class="cta">
+    <app-container>
+      <div class="cta__container">
+        <p>
+          Chega mais, vem fazer parte desse cantinho especial, de leitor para
+          leitor!
+        </p>
+        <picture>
+          <source
+            srcset="assets/images/cta-img-desktop.png"
+            media="(min-width: 1200px)" />
+          <img
+            src="assets/images/cta-img.png"
+            alt="mãos formando um coração uma pilha de livros" />
+        </picture>
+        <app-button [btnText]="'Criar meu perfil'"></app-button>
+      </div>
+    </app-container>
+  </section>
 </section>
