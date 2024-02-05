@@ -2,6 +2,7 @@
 
 section {
   font-family: $ff-poppins;
+  background-color: $landing-page-bg;
 
   & .banner {
     background-image: url('../../../assets/images/comunidade.png');
@@ -223,7 +224,7 @@ section {
           }
 
           &::-webkit-scrollbar-track {
-            background-color: $secondary-color;
+            background-color: $landing-page-bg;
           }
 
 
