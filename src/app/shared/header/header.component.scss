@@ -36,4 +36,18 @@ header {
       padding: 2px 22px;
     }
   }
+
+  @media screen and (min-width: 100em) {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    app-container {
+      max-width: 1170px;
+      margin-inline: auto;
+    }
+  }
 }
