@@ -278,4 +278,10 @@ section {
       }
     }
   }
+
+  @media screen and (min-width: 100em) {
+    & .banner {
+      margin-top: 74px;
+    }
+  }
 }
