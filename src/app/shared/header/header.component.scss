@@ -1,0 +1,53 @@
+@use 'assets/scss/base.scss' as *;
+
+header {
+  background-color: $header-background;
+
+  & div {
+    padding: 16px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  & img {
+    width: 90px;
+  }
+
+  & a {
+    border: 2px solid $secondary-color;
+    border-radius: 20px;
+
+    color: $secondary-color;
+    @include regular-fts(small);
+    font-weight: $fw-3;
+
+    padding: 0px 16px;
+  }
+
+  @media screen and (min-width: 75em) {
+
+    & img {
+      width: 120px;
+    }
+
+    & a {
+      padding: 2px 22px;
+    }
+  }
+
+  @media screen and (min-width: 100em) {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    app-container {
+      max-width: 1170px;
+      margin-inline: auto;
+    }
+  }
+}

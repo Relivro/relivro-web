@@ -1,0 +1,20 @@
+@use 'assets/scss/base.scss' as *;
+
+button {
+  color: $secondary-color;
+  background-color: $btn-background;
+
+  text-align: center;
+  font-family: $ff-poppins;
+  font-weight: $fw-3;
+  @include regular-fts(medium);
+
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+
+  @media screen and (min-width: 75em) {
+    padding: 12px 24px;
+    border-radius: 10px;
+  }
+}

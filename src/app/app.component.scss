@@ -1,0 +1,6 @@
+.container {
+  @media screen and (min-width: 100em) {
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,89 @@
+<section>
+  <app-header></app-header>
+
+  <section class="banner">
+    <app-container>
+      <h1>Uma comunidade para trocar livros!</h1>
+      <app-button [btnText]="'Criar o meu perfil'"></app-button>
+    </app-container>
+  </section>
+
+  <section class="description">
+    <app-container>
+      <div class="description__container">
+        <picture>
+          <source
+            srcset="assets/images/pilha-de-livros-desktop.png"
+            media="(min-width: 1200px)" />
+          <img src="assets/images/pilha-de-livros.png" alt="pilha de livros" />
+        </picture>
+        <p class="description__text">
+          <span>Um livro sempre leva a outro livro, não é mesmo?</span> Todo
+          leitor já passou por isso: chega o momento em que olhamos para a nossa
+          estante e encontramos títulos que não precisam mais fazer parte da
+          nossa coleção. <br /><br />E se... esses livros pudessem ser trocados
+          por outros livros?
+        </p>
+      </div>
+    </app-container>
+  </section>
+
+  <section class="cards">
+    <app-container>
+      <div class="cards__container">
+        <p>
+          Relivro é uma rede social completona para te conectar com outros
+          leitores que também querem trocar livros e conversar!
+        </p>
+        <section class="scroll-container">
+          <article class="scroll-container__card">
+            <img src="assets/images/adicionar.svg" alt="grupo de usuários" />
+            <span>Adicione ou siga outros leitores!</span>
+          </article>
+          <article class="scroll-container__card">
+            <img src="assets/images/postar.svg" alt="globo terrestre" />
+            <span>Poste fotos e resenhas dos seus livros</span>
+          </article>
+          <article class="scroll-container__card">
+            <img
+              src="assets/images/encontrar-titulos.svg"
+              alt="maõs segurando livros" />
+            <span>Encontre novos títulos</span>
+          </article>
+          <article class="scroll-container__card">
+            <img
+              src="assets/images/negociar.svg"
+              alt="duas pessoas conversando" />
+            <span>Faça uma proposta. Deu bom? Combine a troca</span>
+          </article>
+          <article class="scroll-container__card">
+            <img
+              src="assets/images/gerencie-trocas.svg"
+              alt="mão segurando uma lista" />
+            <span>Gerencie suas trocas e propostas</span>
+          </article>
+        </section>
+      </div>
+    </app-container>
+  </section>
+
+  <section class="cta">
+    <app-container>
+      <div class="cta__container">
+        <p>
+          Chega mais, vem fazer parte desse cantinho especial, de leitor para
+          leitor!
+        </p>
+        <picture>
+          <source
+            srcset="assets/images/cta-img-desktop.png"
+            media="(min-width: 1200px)" />
+          <img
+            src="assets/images/cta-img.png"
+            alt="mãos formando um coração uma pilha de livros" />
+        </picture>
+        <app-button [btnText]="'Criar o meu perfil'"></app-button>
+      </div>
+    </app-container>
+  </section>
+</section>

@@ -1,0 +1,285 @@
+@use 'assets/scss/base.scss' as *;
+
+section {
+  font-family: $ff-poppins;
+  background-color: $landing-page-bg;
+
+  & .banner {
+
+    background-repeat: no-repeat;
+    background-image: url('assets/images/comunidade.png');
+    background-size: 100% 357px;
+    background-color: $primary-color;
+
+    padding: 370px 0 20px;
+    text-align: center;
+
+    h1 {
+      color: $primary-black;
+
+      padding: 1rem 0;
+      margin: auto;
+      max-width: 18ch;
+
+      font-weight: $fw-3;
+      @include title-fts(large);
+    }
+  }
+
+  & .description {
+    padding: 70px 0 0;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      & picture img {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 37.5em) {
+        width: 70%;
+        margin-inline: auto;
+
+        & picture img {
+          width: 350px;
+        }
+      }
+
+      & p {
+        color: $primary-black;
+        font-weight: $fw-1;
+        @include regular-fts(medium);
+
+        & span {
+          font-weight: $fw-3;
+          display: block;
+        }
+      }
+    }
+  }
+
+  & .cards {
+    padding: 70px 0 0;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      transition: 0.5s;
+
+      @media screen and (min-width: 37.5em) {
+        width: 70%;
+        margin-inline: auto;
+      }
+
+      p {
+        color: $title-emphasis;
+        font-weight: $fw-3;
+        @include title-fts(small);
+        line-height: 1.6;
+
+        margin-inline: auto;
+      }
+
+      & .scroll-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 90%;
+
+        &__card {
+          width: 100%;
+          height: 250px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          border: 2px dotted #807e7e;
+          border-radius: 12px;
+          padding: 32px 0;
+          gap: 32px;
+
+          img {
+            width: 140px;
+            height: 145px;
+          }
+
+          span {
+            color: $primary-black;
+            text-align: center;
+            font-weight: $fw-3;
+            @include regular-fts(medium);
+            max-width: 18ch;
+          }
+        }
+      }
+    }
+  }
+
+  & .cta {
+    padding: 70px 0;
+
+    &__container {
+      text-align: center;
+
+      display: grid;
+      align-items: center;
+      grid-template-rows: .5fr 2fr .5fr;
+
+      p {
+        color: $primary-black;
+        font-weight: $fw-1;
+        @include regular-fts(medium);
+
+        max-width: 30ch;
+        margin-inline: auto;
+      }
+
+      picture img {
+        margin-inline: auto;
+        max-width: 100%;
+        padding: 1.2em 0;
+
+        @media screen and (min-width: 37.5em) {
+          width: 250px;
+          padding: 2em 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 75em) {
+    & .banner {
+      background-size: 55% 100%;
+      background-position: right;
+      padding: 70px 0;
+      text-align: initial;
+
+      h1 {
+        margin: 0 0 20px 0;
+        max-width: 14ch;
+        text-align: initial;
+      }
+    }
+
+    & .description {
+      padding: 70px 0 0;
+
+      &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5em;
+
+        width: auto;
+
+        & picture img {
+          width: 90%;
+        }
+
+        & p {
+          max-width: 45ch;
+        }
+      }
+    }
+
+    & .cards {
+      padding: 70px 0 0;
+
+      &__container {
+        align-items: unset;
+        gap: 32px;
+        width: auto;
+
+        p {
+          max-width: 44ch;
+          margin: 0;
+        }
+
+        & .scroll-container {
+          flex-direction: row;
+          overflow-x: auto;
+          overflow-y: hidden;
+          width: 100%;
+
+          &::-webkit-scrollbar {
+            height: 6px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+
+            &:hover {
+              background-color: $title-emphasis;
+            }
+
+            border-radius: 6px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: $landing-page-bg;
+          }
+
+          &__card {
+            flex-shrink: 0;
+            width: auto;
+            justify-content: start;
+            padding: 32px 12px;
+            height: 270px;
+
+            span {
+              max-width: 17ch;
+            }
+          }
+        }
+
+      }
+    }
+
+    & .cta {
+
+      padding: 70px 0;
+
+      &__container {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        gap: 32px;
+
+        p {
+          grid-row: 1;
+          grid-column: 2;
+          align-self: end;
+          max-width: 38ch;
+        }
+
+        picture {
+          display: grid;
+          grid-row: span 2;
+          grid-column: 1;
+        }
+
+        picture img {
+          width: 80%;
+        }
+
+        app-button {
+          grid-row: 2;
+          grid-column: 2;
+          align-self: start;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 100em) {
+    & .banner {
+      margin-top: 74px;
+    }
+  }
+}
